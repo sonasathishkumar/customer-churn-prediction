@@ -53,12 +53,3 @@ A complete end-to-end Machine Learning web application to predict customer churn
 
 3. Open your browser and navigate to `http://localhost:8501`.
 
-## Screenshots
-*(Placeholder for screenshots of the application)*
-- **Predict Page**: Shows the prediction form.
-- **Performance Page**: Displays evaluation metrics.
-- **Insights Page**: Contains interactive charts.
-
----
-**Author**: Sona S
-[LinkedIn](#) | [GitHub](#)
