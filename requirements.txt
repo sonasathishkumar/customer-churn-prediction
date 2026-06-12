@@ -8,3 +8,6 @@ seaborn
 plotly
 xgboost
 joblib
+streamlit-option-menu
+fpdf
+reportlab
