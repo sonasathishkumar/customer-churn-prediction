@@ -96,14 +96,8 @@ docker run -p 8501:8501 customer-churn-app
 
 ---
 
-## 👩💻 Author
-
-**Sona Sathish Kumar**
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/YOUR_LINKEDIN)
+**Sona SathishKumar**
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?logo=github)](https://github.com/sonasathishkumar)
 
----
-
-## 📄 License
 
 This project is licensed under the MIT License.
