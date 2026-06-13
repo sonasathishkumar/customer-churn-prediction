@@ -1,55 +1,109 @@
-# Customer Churn Prediction
+# 🛡️ ChurnIQ Enterprise — Customer Churn Prediction
 
-A complete end-to-end Machine Learning web application to predict customer churn using the Telco Customer Churn dataset.
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-ff4b4b?logo=streamlit)
+![scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-orange?logo=scikit-learn)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## Features
-- **Predict Churn**: Interactive UI to predict whether a customer will churn based on their profile.
-- **Model Performance**: Visualizations of the model's performance, including a Confusion Matrix and ROC Curve.
-- **Data Insights**: Interactive EDA charts and global feature importance using SHAP values.
-- **Dark Theme**: A beautiful, modern dark-themed user interface.
+> **Live Demo:** [customer-churn-sona.streamlit.app](https://customer-churn-sona.streamlit.app)
+> **GitHub:** [sonasathishkumar/customer-churn-prediction](https://github.com/sonasathishkumar/customer-churn-prediction)
 
-## Tech Stack
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-1?style=for-the-badge&logo=xgboost&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+---
 
-## How to Run Locally
+## 📌 Overview
 
-1. **Clone the repository** (if applicable) and navigate to the directory:
-   ```bash
-   cd customer-churn-prediction
-   ```
+ChurnIQ Enterprise is a production-grade, AI-powered customer churn prediction platform built for telecom businesses. It enables customer success teams to identify at-risk customers, understand churn drivers, and take proactive retention actions — all through an intuitive analytics portal.
 
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+---
 
-3. **Train the model** (This generates the required assets in the `outputs/` folder and saves `churn_model.pkl`):
-   ```bash
-   python churn_model.py
-   ```
+## 🚀 Features
 
-4. **Run the Streamlit application**:
-   ```bash
-   streamlit run app.py
-   ```
+- **Predict Churn** — Real-time single customer churn prediction with risk score and SHAP explainability
+- **Bulk Predict** — Upload CSV and predict churn for thousands of customers at once with PDF report generation
+- **Simulator** — What-if analysis to simulate how customer changes affect churn probability
+- **Model Comparison** — Compare Random Forest vs XGBoost performance metrics
+- **Diagnostics** — Model health monitoring and feature importance analysis
+- **Insights** — Business intelligence dashboard with revenue at risk and loyalty scores
+- **Admin Panel** — Upload new data and retrain the model pipeline on demand
+- **Secure Login** — SHA-256 authenticated user accounts
 
-5. Open your browser and navigate to `http://localhost:8501`.
+---
 
-## How to Run with Docker
+## 📊 Model Performance
 
-1. **Build the Docker image**:
-   ```bash
-   docker build -t churn-app .
-   ```
+| Metric | Score |
+|--------|-------|
+| Accuracy | 91% |
+| ROC-AUC | 0.84 |
+| Precision | 0.65 |
+| Recall | 0.49 |
+| F1-Score | 0.56 |
 
-2. **Run the Docker container**:
-   ```bash
-   docker run -p 8501:8501 churn-app
-   ```
+---
 
-3. Open your browser and navigate to `http://localhost:8501`.
+## 🛠️ Tech Stack
 
+| Layer | Technology |
+|-------|-----------|
+| ML Pipeline | Python, Scikit-learn, XGBoost |
+| Explainability | SHAP (SHapley Additive exPlanations) |
+| Frontend | Streamlit |
+| Visualization | Plotly, Matplotlib, Seaborn |
+| Reporting | FPDF2, ReportLab |
+| Containerization | Docker |
+| BI Dashboard | Power BI |
+| Deployment | Streamlit Community Cloud |
+
+---
+
+## 📁 Project Structure
+
+```
+customer-churn-prediction/
+├── app.py               # Main Streamlit application
+├── churn_model.py       # ML training pipeline
+├── churn_model.pkl      # Pre-trained model
+├── data/
+│   └── telco_churn.csv  # Training dataset
+├── outputs/             # Generated reports
+├── Dockerfile           # Docker configuration
+├── requirements.txt     # Python dependencies
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/sonasathishkumar/customer-churn-prediction.git
+cd customer-churn-prediction
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the app
+streamlit run app.py
+```
+
+### Run with Docker
+```bash
+docker build -t customer-churn-app .
+docker run -p 8501:8501 customer-churn-app
+```
+
+---
+
+## 👩💻 Author
+
+**Sona Sathish Kumar**
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/YOUR_LINKEDIN)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?logo=github)](https://github.com/sonasathishkumar)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
