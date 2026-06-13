@@ -1008,7 +1008,7 @@ elif page == "Bulk Predict":
         if missing_cols:
             st.error(f"Missing required columns in CSV: {', '.join(missing_cols)}")
         else:
-            st.write("Preview of Uploaded Data:")
+                st.write("Preview of Uploaded Data:")
             st.dataframe(batch_df.head(5), use_container_width=True)
             
             with st.spinner("Processing records..."):
@@ -1356,3 +1356,4 @@ elif page == "System Info":
         - **Reporting Engine**: FPDF2
         - **Security**: SHA-256 Authentication Protocol
         """)
+
