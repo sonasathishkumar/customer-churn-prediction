@@ -344,7 +344,7 @@ def create_pdf_report(prob, pred, top_features_df):
     else:
         pdf.multi_cell(0, 8, "Customer account is currently stable.\n- Customer may be receptive to premium add-ons (e.g. Device Protection).\n- Maintain standard engagement cadence.")
         
-    return bytes(pdf.output(dest='S'))
+    return pdf.output()
 
 # ---- PAGE LOGIC ----
 
