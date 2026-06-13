@@ -94,8 +94,4 @@ docker build -t customer-churn-app .
 docker run -p 8501:8501 customer-churn-app
 ```
 
----
-
-**Sona SathishKumar**
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?logo=github)](https://github.com/sonasathishkumar)
 
