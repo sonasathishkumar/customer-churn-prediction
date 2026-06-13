@@ -344,7 +344,7 @@ def create_pdf_report(prob, pred, top_features_df):
     else:
         pdf.multi_cell(0, 8, "Customer account is currently stable.\n- Customer may be receptive to premium add-ons (e.g. Device Protection).\n- Maintain standard engagement cadence.")
         
-    return bytes(pdf.output())
+    return bytes(pdf.output(dest='S'))
 
 # ---- PAGE LOGIC ----
 
@@ -1326,18 +1326,19 @@ elif page == "Admin Panel":
                 
                 with st.status("Executing Retraining Pipeline...", expanded=True) as status:
                     st.write("Initializing ML script...")
-                    # Run subprocess
-                    result = subprocess.run(["python", "churn_model.py"], capture_output=True, text=True)
-                    if result.returncode == 0:
+                    try:
+                        from churn_model import train_and_evaluate
+                        train_and_evaluate()
+                        
                         st.write("Model retrained successfully!")
                         st.write("Generating new SHAP values and Diagnostics...")
                         st.cache_resource.clear()
                         st.cache_data.clear()
                         status.update(label="Retraining Complete!", state="complete", expanded=False)
                         st.success("The new model is now live. All predictions will use the updated weights.")
-                    else:
+                    except Exception as e:
                         status.update(label="Retraining Failed", state="error", expanded=True)
-                        st.error(f"Error during execution:\n{result.stderr}")
+                        st.error(f"Error during execution:\n{str(e)}")
 
 elif page == "System Info":
     st.title("System & Architecture Information")
